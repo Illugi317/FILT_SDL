@@ -111,3 +111,14 @@ void Grid_renderCell(Cell *cell, SDL_Renderer *renderer)
     SDL_SetRenderDrawColor(renderer, cell->rect_color.r, cell->rect_color.g, cell->rect_color.b, cell->rect_color.a);
     SDL_RenderFillRect(renderer, &cell->rect);
 }
+
+void Grid_randomize_colors(Grid *grid)
+{
+    for(int i = 0; i < grid->x_cells; i++)
+    {
+        for(int j = 0; j < grid->y_cells; j++)
+        {
+            grid->cells[i][j].rect_color = random_color();
+        }
+    }
+}

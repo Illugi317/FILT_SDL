@@ -56,5 +56,6 @@ void Grid_initCell(Grid *grid, Cell *cell, int i, int j, SDL_Color color, SDL_Co
 void Grid_render(Grid *grid, SDL_Renderer *renderer);
 void Grid_renderCell(Cell *cell, SDL_Renderer *renderer);
 
+void Grid_randomize_colors(Grid *grid);
 
 #endif // GRID_H
